@@ -1,0 +1,94 @@
+h1 {
+  margin: 20px;
+}
+h2 {
+  font-size: 100px;
+}
+body {
+  font-family: cairo;
+}
+i {
+  color: #393e46;
+}
+button {
+  display: block;
+  background: #393e46;
+  color: #fff;
+  font-size: 10px;
+  padding: 6px;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  transition: all 200ms ease-in-out;
+  text-align: center;
+}
+form button {
+  width: 100px;
+  margin: 0 auto;
+}
+#date {
+  text-align: center;
+}
+#hum {
+  list-style: none;
+  text-align: center;
+
+  font-weight: bolder;
+}
+#windy {
+  list-style: none;
+  text-align: center;
+
+  font-weight: bolder;
+}
+.col-7 {
+  text-align: center;
+}
+.mainicon {
+  font-size: 70px;
+  text-align: center;
+}
+.tempUnit {
+  font-size: 25px;
+  margin: 40px auto;
+  text-align: center;
+  text-decoration: none;
+  color: #393e46;
+}
+.celciuslink {
+  font-size: 25px;
+  text-align: center;
+  text-decoration: none;
+  color: #393e46;
+}
+.fahrenheitlink {
+  font-size: 25px;
+  margin: 40px auto;
+  text-align: center;
+  text-decoration: none;
+  color: #393e46;
+}
+.container {
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 50px 60px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.form-control {
+  text-align: right;
+  font-size: 10px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+.card {
+  position: relative;
+  background: #fff;
+
+  width: 100%;
+  text-align: center;
+}
+
+.col {
+  margin: 5px;
+}
