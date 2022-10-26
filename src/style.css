@@ -92,3 +92,7 @@ form button {
 .col {
   margin: 5px;
 }
+.sourceCode {
+  font-size: 10px;
+  text-align: center;
+}
