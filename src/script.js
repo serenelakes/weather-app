@@ -25,6 +25,7 @@ function formatDate(date) {
 }
 
 //Search engine for Cityname + real Temperature
+
 function displayWeatherCondition(response) {
   console.log(response.data);
   document.querySelector("#city").innerHTML = response.data.name;
@@ -40,6 +41,8 @@ function displayWeatherCondition(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+
+  celciusTemperature = response.data.main.temp;
 }
 
 function searchCity(cityname) {
@@ -64,8 +67,21 @@ function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let fahrenheitTemperature = (celciusTemperature * 9) / 5 + 32;
+  let temperatureElement = document.querySelector("#temperature-number");
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function displayCelciusTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature-number");
+  temperatureElement.innerHTML = Math.round(celciusTemperature);
+}
 
 //CALL
+let celciusTemperature = null;
 
 let dateTime = document.querySelector("#date");
 let currentTime = new Date();
@@ -80,7 +96,7 @@ currentLocationButton.addEventListener("click", getCurrentLocation);
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
-//let celsiusLink = document.querySelector("#celcius-link");
-//celsiusLink.addEventListener("click", convertToCelsius);
+let celciusLink = document.querySelector("#celcius-link");
+celciusLink.addEventListener("click", displayCelciusTemperature);
 
 searchCity("San Francisco");
