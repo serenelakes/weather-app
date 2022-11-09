@@ -29,6 +29,8 @@ function formatDate(date) {
 function displayWeatherCondition(response) {
   console.log(response.data);
   document.querySelector("#city").innerHTML = response.data.name;
+  document.querySelector("#weatherDescription").innerHTML =
+    response.data.weather[0].description;
   document.querySelector("#temperature-number").innerHTML = Math.round(
     response.data.main.temp
   );
