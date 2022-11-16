@@ -1,8 +1,8 @@
 h1 {
-  margin: 20px;
+  margin: 14px;
 }
 h2 {
-  font-size: 100px;
+  font-size: 90px;
 }
 body {
   font-family: cairo;
@@ -57,9 +57,10 @@ form button {
   font-size: 12px;
   font-weight: bolder;
 }
-.col-7 {
-  text-align: center;
+#other-data {
+  margin: 30px auto;
 }
+
 .mainicon {
   font-size: 70px;
   text-align: center;
@@ -72,13 +73,13 @@ form button {
   color: #393e46;
 }
 .celciuslink {
-  font-size: 25px;
+  font-size: 20px;
   text-align: center;
   text-decoration: none;
   color: #393e46;
 }
 .fahrenheitlink {
-  font-size: 25px;
+  font-size: 20px;
   margin: 40px auto;
   text-align: center;
   text-decoration: none;
@@ -96,6 +97,9 @@ form button {
   font-size: 10px;
   border-radius: 15px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+.otherData {
+  text-align: left;
 }
 .card {
   position: relative;

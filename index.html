@@ -49,7 +49,7 @@
         <div class="col" id="date">07:00 a.m. Thursday</div>
       </div>
 
-      <div class="row">
+      <div class="row" id="main-data">
         <div class="col">
           <h1 id="city"></h1>
         </div>
@@ -70,70 +70,25 @@
           </span>
         </div>
       </div>
-
-      <div class="row">
+      <div class="row" id="other-data">
         <div class="col">
-          <div class="card">
-            <div class="card-body">
-              <li id="Description">
-                Description: <span id="weatherDescription"></span>
-              </li>
-              <li id="hum">Humidity: <span id="humidity">50</span>%</li>
-
-              <li id="windy">Wind: <span id="wind">10</span>km/h</li>
-            </div>
-          </div>
+          <li id="Description">
+            Description: <span id="weatherDescription"></span>
+          </li>
         </div>
         <div class="col">
-          <div class="card">
-            <div class="card-body">
-              <p>Saturday</p>
-              <i class="fa-solid fa-cloud-sun-rain"></i>
-              <div class="degree">15C°</div>
-            </div>
-          </div>
+          <li id="hum">Humidity: <span id="humidity">50</span>%</li>
         </div>
         <div class="col">
-          <div class="card">
-            <div class="card-body">
-              <p>Sunday</p>
-              <i class="fa-solid fa-cloud-bolt"></i>
-              <div class="degree">16C°</div>
-            </div>
-          </div>
+          <li id="windy">Wind: <span id="wind">10</span>km/h</li>
         </div>
       </div>
 
       <div class="row">
-        <div class="col">
-          <div class="card">
-            <div class="card-body">
-              <p>Monday</p>
-              <i class="fa-solid fa-cloud-sun"></i>
-              <div class="degree">18C°</div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <div class="card-body">
-              <p>Tuesday</p>
-              <i class="fa-solid fa-sun"></i>
-              <div class="degree">21C°</div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <div class="card-body">
-              <p>Wednesday</p>
-              <i class="fa-solid fa-sun"></i>
-              <div class="degree">20C°</div>
-            </div>
-          </div>
-        </div>
+        <div id="forecast"></div>
       </div>
     </div>
+
     <div class="sourceCode">
       <a href="https://github.com/serenelakes/weather-app">Open-source Code</a>
       by Marie Pickl

@@ -26,6 +26,32 @@ function formatDate(date) {
 
 //Search engine for Cityname + real Temperature
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Thu", "Fri", "Sat", "Sun"];
+
+  let forecastHTML = `<div class="row">`;
+
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+        <div class="col">  
+         <div class="card">
+            <div class="card-body">
+              <p>${day}</p>
+              <i class="fa-solid fa-cloud-sun-rain"></i>
+              <div class="degree">15C°</div>
+            </div>
+          </div>
+        </div>  
+          `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function displayWeatherCondition(response) {
   console.log(response.data);
   document.querySelector("#city").innerHTML = response.data.name;
@@ -102,3 +128,4 @@ let celciusLink = document.querySelector("#celcius-link");
 celciusLink.addEventListener("click", displayCelciusTemperature);
 
 searchCity("San Francisco");
+displayForecast();
