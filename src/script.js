@@ -24,7 +24,7 @@ function formatDate(date) {
   return `${day} ${hours}:${minutes}`;
 }
 
-//Search engine for Cityname + real Temperature
+//Forecast
 
 function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
@@ -52,6 +52,15 @@ function displayForecast() {
   forecastElement.innerHTML = forecastHTML;
 }
 
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&exclude={part}&appid=${apiKey}&units=metric
+`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
+//Search engine for Cityname + real Temperature
+
 function displayWeatherCondition(response) {
   console.log(response.data);
   document.querySelector("#city").innerHTML = response.data.name;
@@ -71,6 +80,8 @@ function displayWeatherCondition(response) {
   );
 
   celciusTemperature = response.data.main.temp;
+
+  getForecast(response.data.coord);
 }
 
 function searchCity(cityname) {
