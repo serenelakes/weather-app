@@ -29,33 +29,42 @@ form button {
 #date {
   text-align: center;
 }
-#weatherDescription {
-  text-align: center;
-  font-size: 15px;
-}
+
 #Description {
   list-style: none;
   text-align: center;
-  font-weight: bolder;
   font-size: 12px;
 }
-#humidity {
-  font-size: 15px;
+#descript {
+  color: #778899;
 }
-#wind {
-  font-size: 15px;
+#weatherDescription {
+  text-align: center;
+  font-size: 16px;
 }
+
 #hum {
   list-style: none;
   text-align: center;
   font-size: 12px;
-  font-weight: bolder;
 }
+#humid {
+  color: #778899;
+}
+#humidity {
+  font-size: 16px;
+}
+
 #windy {
   list-style: none;
   text-align: center;
   font-size: 12px;
-  font-weight: bolder;
+}
+#winwin {
+  color: #778899;
+}
+#wind {
+  font-size: 16px;
 }
 #other-data {
   margin: 30px auto;
@@ -83,7 +92,7 @@ form button {
   margin: 40px auto;
   text-align: center;
   text-decoration: none;
-  color: #393e46;
+  color: #778899;
 }
 .container {
   max-width: 700px;
